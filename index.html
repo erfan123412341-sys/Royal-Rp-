@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>ROYAL RP | سرور رول‌پلی ایرانی</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#101014;color:white;
+ font-family:Tahoma,Arial,sans-serif;line-height:1.9
+}
+header{
+ background:#19191f;padding:18px 16px;
+ border-bottom:2px solid #d92939;
+ display:flex;justify-content:space-between;align-items:center
+}
+.logo{font-size:23px;font-weight:bold;color:#ff424e}
+nav a{color:white;text-decoration:none;font-size:13px}
+.hero{
+ text-align:center;padding:65px 16px;
+ background:radial-gradient(ellipse at top,#621a24,#101014 75%)
+}
+.hero h1{font-size:35px;margin:12px 0}
+.red{color:#ff424e}
+.hero p{color:#ddd}
+.btn{
+ display:inline-block;background:#d92939;color:white;
+ padding:10px 20px;border-radius:7px;
+ border:0;text-decoration:none;font-size:14px;
+ cursor:pointer;margin:5px
+}
+section{padding:25px 16px;max-width:850px;margin:auto}
+h2{font-size:22px}
+.card{
+ background:#1a1a21;border:1px solid #363640;
+ border-radius:12px;padding:18px;margin:12px 0
+}
+.ip{direction:ltr;overflow-wrap:anywhere;color:#ff626c}
+.small{font-size:12px;color:#aaa}
+footer{
+ text-align:center;padding:20px;color:#aaa;
+ border-top:1px solid #333
+}
+</style>
+</head>
+
+<body>
+<header>
+ <div class="logo">ROYAL RP</div>
+ <nav><a href="#rules">قوانین سرور</a></nav>
+</header>
+
+<div class="hero">
+ <p class="red">به دنیای رول‌پلی خوش آمدی</p>
+ <h1>زندگی جدیدت از <span class="red">اینجا</span> شروع می‌شود!</h1>
+ <p>شخصیت خودت را بساز؛ داستان خودت را زندگی کن.</p>
+ <a href="#connect" class="btn">اتصال به سرور</a>
+ <a href="#rules" class="btn">قوانین</a>
+</div>
+
+<section>
+ <h2>👑 درباره ROYAL RP</h2>
+ <div class="card">
+  به سرور رویال آرپی خوش آمدی!
+  در اینجا می‌توانی نقش دلخواهت را انتخاب کنی،
+  شغل پیدا کنی، با دیگر بازیکنان تعامل داشته باشی
+  و داستان خودت را در دنیای سن آندریاس بسازی.
+ </div>
+</section>
+
+<section id="connect">
+ <h2>🎮 اتصال به سرور</h2>
+ <div class="card">
+  <p>آدرس سرور:</p>
+  <p class="ip" id="ip">IP:PORT</p>
+  <button class="btn" onclick="copyIP()">کپی آدرس</button>
+  <p class="small">آدرس نمونه است؛ آن را با IP و پورت واقعی سرورت عوض کن.</p>
+ </div>
+</section>
+
+<section id="rules">
+ <h2>📜 قوانین سرور</h2>
+ <div class="card">
+  <p>۱. احترام به تمام بازیکنان الزامی است.</p>
+  <p>۲. استفاده از چیت و تقلب ممنوع است.</p>
+  <p>۳. قوانین رول‌پلی را رعایت کن.</p>
+  <p>۴. از توهین و ایجاد مزاحمت خودداری کن.</p>
+  <p>۵. دستورهای مدیریت سرور را رعایت کن.</p>
+ </div>
+</section>
+
+<section>
+ <h2>📢 ارتباط با ما</h2>
+ <div class="card">
+  اخبار و اطلاعیه‌های سرور به‌زودی اینجا قرار می‌گیرند.
+  <p class="small">لینک شبکه اجتماعی خودت را بعداً اضافه کن.</p>
+ </div>
+</section>
+
+<footer>
+ ROYAL RP © 2026 | تمامی حقوق محفوظ است
+</footer>
+
+<script>
+function copyIP(){
+ const ip=document.getElementById("ip").textContent.trim();
+ if(ip==="IP:PORT"){
+  alert("ابتدا IP و پورت واقعی سرور را در کد وارد کن.");
+  return;
+ }
+ if(navigator.clipboard && window.isSecureContext){
+  navigator.clipboard.writeText(ip)
+   .then(()=>alert("آدرس سرور کپی شد"))
+   .catch(()=>prompt("آدرس را کپی کن:",ip));
+ }else{
+  prompt("آدرس سرور را کپی کن:",ip);
+ }
+}
+</script>
+</body>
+  </html>
+  
